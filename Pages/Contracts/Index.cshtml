@@ -1,0 +1,66 @@
+@page
+@model CashmoreApp.Pages.Contracts.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contract[0].ContractProductLine)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contract[0].ContractPurchaseOrder)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contract[0].ContractStatus)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contract[0].ContractStartDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contract[0].ContractEndDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contract[0].ContractValue)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Contract) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContractProductLine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContractPurchaseOrder)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContractStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContractStartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContractEndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContractValue)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ContractID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ContractID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ContractID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

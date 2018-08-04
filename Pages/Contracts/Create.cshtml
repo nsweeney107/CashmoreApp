@@ -1,0 +1,59 @@
+@page
+@model CashmoreApp.Pages.Contracts.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Contract</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Contract.ContractProductLine" class="control-label"></label>
+                <input asp-for="Contract.ContractProductLine" class="form-control" />
+                <span asp-validation-for="Contract.ContractProductLine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contract.ContractPurchaseOrder" class="control-label"></label>
+                <input asp-for="Contract.ContractPurchaseOrder" class="form-control" />
+                <span asp-validation-for="Contract.ContractPurchaseOrder" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contract.ContractStatus" class="control-label"></label>
+                <input asp-for="Contract.ContractStatus" class="form-control" />
+                <span asp-validation-for="Contract.ContractStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contract.ContractStartDate" class="control-label"></label>
+                <input asp-for="Contract.ContractStartDate" class="form-control" />
+                <span asp-validation-for="Contract.ContractStartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contract.ContractEndDate" class="control-label"></label>
+                <input asp-for="Contract.ContractEndDate" class="form-control" />
+                <span asp-validation-for="Contract.ContractEndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contract.ContractValue" class="control-label"></label>
+                <input asp-for="Contract.ContractValue" class="form-control" />
+                <span asp-validation-for="Contract.ContractValue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

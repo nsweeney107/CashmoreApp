@@ -1,0 +1,49 @@
+@page
+@model CashmoreApp.Pages.Users.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.User.UserFirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.UserFirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.UserLastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.UserLastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.UserEmail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.UserEmail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.UserPassword)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.UserPassword)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.UserAccessLevel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.UserAccessLevel)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.User.UserID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

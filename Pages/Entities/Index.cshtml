@@ -1,0 +1,84 @@
+@page
+@model CashmoreApp.Pages.Entities.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Entity[0].EntityName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Entity[0].EntityAddress1)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Entity[0].EntityAddress2)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Entity[0].EntityCity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Entity[0].EntityState)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Entity[0].EntityZipcode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Entity[0].EntityCountry)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Entity[0].EntityPhoneNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Entity[0].EntityType)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Entity) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EntityName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EntityAddress1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EntityAddress2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EntityCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EntityState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EntityZipcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EntityCountry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EntityPhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EntityType)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.EntityID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.EntityID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.EntityID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

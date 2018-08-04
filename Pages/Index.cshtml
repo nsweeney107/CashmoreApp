@@ -1,0 +1,202 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<asp:ContentPlaceHolder id="Stylesheets">
+    <link href="/wwwroot/css/custom.css" rel="stylesheet" type="text/css" />
+</asp:ContentPlaceHolder>
+<html>
+    <body>
+        <h1>Home Page</h1>
+
+        <table class="container">
+            <tr>
+                <td colspan="3">
+                    <button name="NewContractButton"
+                        class="button-template">
+                        Start New Contract
+                    </button>
+                    <br>
+                    <select name="ContractTypeDropDown">
+                        <option value="CaptialContract">Captial</option>
+                        <option value="SupplyContract">Supply</option>
+                        <option value="ServiceContract">Service</option>
+                        <option value="MinorEquipmentContract">Minor Equipment</option>
+                        <option value="MaintenanceAgreementContract">Maintenance Agreement</option>
+                        <option value="NetworkAccessContract">Network Access</option>
+                        <option value="BAAContract">BAA</option>
+                        <option value="SecurityRiderContract">Security Rider</option>
+                        <option value="ProductUsageContract">Product Usage</option>
+                        <option value="SecurityAssessmentContract">Security Assessment</option>
+                        <option value="TrialContract">Trial Contract</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button name="AllContractsButton"
+                        class="button-template">
+                        All Contracts List
+                    </button>
+                </td>
+                <td>
+                    <button name="ContractsByCommodityButton"
+                        class="button-template">
+                        All Contracts by Commodity
+                    </button>
+                    <br>
+                    Please Select a Commodity
+                    <br>
+                    <select name="CommodityDropDown">
+                        <option value="CommodityCapital">Capital</option>
+                        <option value="CommodityService">Service</option>
+                        <option value="CommodityMedicalSupplies">Supplies, Medical</option>
+                        <option value="CommodityOperationalSupplies">Supplies, Operational</option>
+                    </select>
+                </td>
+                <td>
+                    <button name="ContractsByTermRemainingButton"
+                        class="button-template">
+                        Contracts by Term Remaining
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button name="ExpiringContractsButton"
+                        class="button-template">
+                        Expiring Contracts in the Next X Days
+                    </button>
+                </td>
+                <td>
+                    <button name="ProjectContractValueButton"
+                        class="button-template">
+                        Projected Contract Value
+                    </button>
+                </td>
+                <td>
+                    <button name="ContractsByTypeButton"
+                        class="button-template">
+                        Contract by Type
+                    </button>
+                </td>
+            </tr>
+        </table>
+        
+        <!-- <div class="grid-container">
+            <div class="item1">
+                <button />
+            </div>
+            <div class="item2">2</div>
+            <div class="item3">3</div>
+            <div class="item4">4</div>
+            <div class="item5">5</div>
+            <div class="item6">6</div>
+            <div class="item7">7</div>
+        </div> -->
+    </body>
+</html>
+<!-- <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    Learn how to build ASP.NET apps that can run anywhere.
+                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    There are powerful new features in Visual Studio for building modern web apps.
+                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/banner3.svg" alt="Package Management" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    Bring in libraries from NuGet and npm, and automate tasks using Grunt or Gulp.
+                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525029&clcid=0x409">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/banner4.svg" alt="Microsoft Azure" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
+                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <h2>Application uses</h2>
+        <ul>
+            <li>Sample pages using ASP.NET Core Razor Pages</li>
+            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h2>How to</h2>
+        <ul>
+            <li><a href="https://go.microsoft.com/fwlink/?linkid=852130">Working with Razor Pages.</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h2>Overview</h2>
+        <ul>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h2>Run &amp; Deploy</h2>
+        <ul>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure App Service</a></li>
+        </ul>
+    </div>
+</div> -->

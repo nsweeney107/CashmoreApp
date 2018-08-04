@@ -1,0 +1,11 @@
+C:\Users\nts159\CashmoreApp\bin\Debug\netcoreapp2.0\CashmoreApp.deps.json
+C:\Users\nts159\CashmoreApp\bin\Debug\netcoreapp2.0\CashmoreApp.runtimeconfig.json
+C:\Users\nts159\CashmoreApp\bin\Debug\netcoreapp2.0\CashmoreApp.runtimeconfig.dev.json
+C:\Users\nts159\CashmoreApp\bin\Debug\netcoreapp2.0\CashmoreApp.dll
+C:\Users\nts159\CashmoreApp\bin\Debug\netcoreapp2.0\CashmoreApp.pdb
+C:\Users\nts159\CashmoreApp\obj\Debug\netcoreapp2.0\CashmoreApp.csproj.CoreCompileInputs.cache
+C:\Users\nts159\CashmoreApp\obj\Debug\netcoreapp2.0\CashmoreApp.AssemblyInfoInputs.cache
+C:\Users\nts159\CashmoreApp\obj\Debug\netcoreapp2.0\CashmoreApp.AssemblyInfo.cs
+C:\Users\nts159\CashmoreApp\obj\Debug\netcoreapp2.0\CashmoreApp.dll
+C:\Users\nts159\CashmoreApp\obj\Debug\netcoreapp2.0\CashmoreApp.pdb
+C:\Users\nts159\CashmoreApp\obj\Debug\netcoreapp2.0\CashmoreApp.csprojResolveAssemblyReference.cache

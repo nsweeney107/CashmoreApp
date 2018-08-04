@@ -1,0 +1,38 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container{
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.container td{
+    vertical-align: top;
+    text-align: center;
+    padding: 50px;
+}
+
+.button-template{
+    border: none !important;
+    background-color: inherit !important;
+    width: 300px !important;
+    height: 150px;
+    padding: 14px 28px !important;
+    font-size: 64px !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+}
+
+/* On mouse-over */
+.button-template:hover {
+    background: #eee !important;
+}
